@@ -1,0 +1,63 @@
+<Placemark>
+    <name>9700</name>
+    <description>9700</description>
+    <Style>
+        <LineStyle>
+            <color>ff0000ff</color>
+        </LineStyle>
+        <PolyStyle>
+            <fill>0</fill>
+        </PolyStyle>
+    </Style>
+    <ExtendedData>
+        <SchemaData schemaUrl="#Airspace">
+            <SimpleData name="Name">OJOS313</SimpleData>
+            <SimpleData name="Description">MINIMUM VECTORING ALTITUDE (MVA)</SimpleData>
+            <SimpleData name="beginPosition">1980-01-01T14:00:00Z</SimpleData>
+            <SimpleData name="interpretation">BASELINE</SimpleData>
+            <SimpleData name="sequenceNumber">1</SimpleData>
+            <SimpleData name="type">OTHER</SimpleData>
+            <SimpleData name="minimumLimit_uom">FT</SimpleData>
+            <SimpleData name="minimumLimitReference">MSL</SimpleData>
+        </SchemaData>
+    </ExtendedData>
+    <Polygon>
+        <outerBoundaryIs>
+            <LinearRing>
+                <coordinates>-123.08,39.86528,0 -123.12389,39.94056,0 -123.16389,40.065,0 -123.12278,40.06028,0 -123.11444,40.18526,0 -122.9875,40.11861,0 -122.90361,40.12444,0 -122.94194,40.06333,0 -122.9725,40.00861,0 -122.8923,39.9584,0 -122.97583,39.92194,0 -123.08,39.86528,0 -123.08,39.86528,0</coordinates>
+            </LinearRing>
+        </outerBoundaryIs>
+    </Polygon>
+</Placemark>
+
+
+ <Placemark>
+    <name>9700</name>
+    <description>MINIMUM VECTORING ALTITUDE (MVA)</description>
+    <Style>
+      <lineStyle>
+        <color>ff0000ff</color>
+      </lineStyle>
+      <polyStyle>
+        <fill>0</fill>
+      </polyStyle>
+    </Style>
+    <ExtendedData>
+      <SchemaData schemaUrl="#Airspace">
+        <SimpleData name="Description">MINIMUM VECTORING ALTITUDE (MVA)</SimpleData>
+        <SimpleData name="beginPosition">1980-01-01T14:00:00Z</SimpleData>
+        <SimpleData name="interpretation">BASELINE</SimpleData>
+        <SimpleData name="sequenceNumber">1</SimpleData>
+        <SimpleData name="type">OTHER</SimpleData>
+        <SimpleData name="minimumLimit_uom">FT</SimpleData>
+        <SimpleData name="minimumLimitReference">MSL</SimpleData>
+      </SchemaData>
+    </ExtendedData>
+    <Polygon>
+      <outerBoundaryIs>
+        <LinearRing>
+          <coordinates>-123.08,39.86528 -123.12389,39.94056 -123.16389,40.065 -123.12278,40.06028 -123.11444,40.18526 -122.9875,40.11861 -122.90361,40.12444 -122.94194,40.06333 -122.9725,40.00861 -122.8923,39.9584 -122.97583,39.92194 -123.08,39.86528</coordinates>
+        </LinearRing>
+      </outerBoundaryIs>
+    </Polygon>
+  </Placemark>

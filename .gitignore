@@ -1,0 +1,8 @@
+*~
+.gradle
+.git
+.idea
+gradlew
+gradlew.bat
+build
+gradle
