@@ -11,4 +11,12 @@ Google Earth or Foreflight.
 
 ## Running Interactively
 
-% gradle console:run -q --console=plain
+% gradle run -q --console=plain
+FAA MVA charts are available at https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/mva_mia/mva/
+
+```
+url> https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/mva_mia/aixm/A11_MVA_FUS3_2019.xml
+Read 93169 bytes.
+Write /Users/crawford/Desktop/A11_MVA_FUS3_2019.kml
+url>
+```
