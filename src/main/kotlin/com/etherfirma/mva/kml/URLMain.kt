@@ -31,7 +31,11 @@ private val FAA_URL = "https://www.faa.gov/air_traffic/flight_info/aeronav/digit
  */
 
 fun main (args: Array<String>) {
-    println ("FAA MVA charts are available at $FAA_URL\n")
+    println ("FAA MVA charts are available at $FAA_URL")
+    val home = System.getProperty("user.home") + File.separatorChar + "Desktop"
+    println ("Output: $home")
+    println ()
+
     interpreter ("url> ") { url ->
         val str = URLFetcher.fetch (url)
         println ("Read ${str.length} bytes.")
@@ -40,8 +44,7 @@ fun main (args: Array<String>) {
         val kml = KMLConverter.convert (xml)
 
         val fragment = generateFilename (url)
-        val home = System.getProperty("user.home")
-        val filename = home + File.separatorChar + "Desktop" + File.separatorChar + fragment + ".kml"
+        val filename = home + File.separatorChar + fragment + ".kml"
         File (filename).writeText (kml.toXml ())
         println ("Write $filename")
     }
