@@ -89,7 +89,11 @@ data class Point (
 @JsonRootName ("IconStyle")
 data class IconStyle (
     @set:JsonProperty("Icon")
-    var icon: Icon
+    var icon: Icon,
+
+    var colorMode: String? = null,
+    var scale: Float? = null,
+    var heading: Int? = null,
 )
 
 @JsonRootName ("IconStyle")

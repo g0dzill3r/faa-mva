@@ -1,5 +1,6 @@
 package com.etherfirma.mva.kml
 
+import com.etherfirma.mva.faa.FAA
 import com.etherfirma.mva.util.ParserUtil
 import com.etherfirma.mva.util.URLFetcher
 import com.etherfirma.mva.util.toXml
@@ -24,16 +25,19 @@ private fun generateFilename (url: String): String {
     return url.substring (i + 1, j)
 }
 
-private val FAA_URL = "https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/mva_mia/mva/";
+
 
 /**
  * A handy command-line application for iteratively converting from a URL to a local .kml file.
  */
 
 fun main (args: Array<String>) {
-    println ("FAA MVA charts are available at $FAA_URL")
+    println ("FAA source files are available at:")
+    println (" - MVA: ${FAA.URL.MVA}")
+    println (" - MIA: ${FAA.URL.MIA}")
+
     val home = System.getProperty("user.home") + File.separatorChar + "Desktop"
-    println ("Output: $home")
+    println ("Output to: $home")
     println ()
 
     interpreter ("url> ") { url ->
@@ -45,8 +49,9 @@ fun main (args: Array<String>) {
 
         val fragment = generateFilename (url)
         val filename = home + File.separatorChar + fragment + ".kml"
-        File (filename).writeText (kml.toXml ())
-        println ("Write $filename")
+        val converted = kml.toXml ()
+        File (filename).writeText (converted)
+        println ("Wrote ${converted.length} bytes to $filename")
     }
     return
 }

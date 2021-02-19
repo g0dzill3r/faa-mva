@@ -8,7 +8,7 @@ object KMLConverter {
     private fun getDocument (xml: AIXMBasicMessage): Document {
         val schema = getSchema (xml)
         val folder = getFolder (xml)
-        val style = Style (id="noicon", iconStyle=IconStyle (Icon ()))
+        val style = Style (id="noicon", iconStyle=IconStyle (Icon (), colorMode="normal", scale=0.1f, heading=0))
         return Document (id="root_doc", schema=schema, folder=folder, style=style)
     }
 
